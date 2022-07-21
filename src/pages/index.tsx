@@ -3,9 +3,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Autoplay } from 'swiper'
+import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import "swiper/css/effect-coverflow";
 import 'swiper/css/pagination';
 
 
@@ -16,14 +17,25 @@ const Home: NextPage = () => {
         // pagination={{
         //   type: "progressbar",
         // }}
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
-        navigation={
-          true
-        }
-        modules={[Pagination, Navigation, Autoplay]}
+        // navigation={
+        //   true
+        // }
+        modules={[Pagination, Navigation, Autoplay,EffectCoverflow ]}
         className={styles.mySwiper}
       >
         <SwiperSlide className={styles.swiper_slide}>
