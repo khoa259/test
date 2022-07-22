@@ -26,10 +26,10 @@ const Banner = (props: Props) => {
           modifier: 1,
           slideShadows: true,
         }}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         modules={[EffectCoverflow, Pagination , Autoplay]}
         className= {styles.mySwiper}
       >
